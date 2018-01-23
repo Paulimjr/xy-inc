@@ -14,8 +14,10 @@
 #Gradle temporary files
 target/
 .mvn/
+/bin
 
 #Eclipse files
+**/bin
 **/.project
 **/.classpath
 **/.settings/

@@ -28,6 +28,7 @@
    - GET - /pois - Retorna todos os pois
    - GET - /pois/{id} - Retorna o poi pelo ID
    - GET - /pois/findByName?{name} - Buscar o poi pelo nome
+   - GET - /pois/proximity?{coordinatesX, coordinatesY,maxDistance}
    - POST - /pois - Salvar um poi (passando o body)
    - DELETE - /pois/{id} - Deletar um poi
       

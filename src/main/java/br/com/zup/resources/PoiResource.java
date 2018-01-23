@@ -96,4 +96,28 @@ public class PoiResource {
 		List<Poi> pois = this.poiService.findByName(name);
 		return  ResponseEntity.ok().body(pois);
 	}
+	
+	/**
+	 * API para consultar os pois pela proximidade
+	 * 
+	 * @param coordinatesX coodenada X
+	 * @param coordinatesY coodenada Y
+	 * @param maxDistance distância máxima
+	 * @return
+	 */
+	@RequestMapping(value = "/proximity", method=RequestMethod.GET)
+	public ResponseEntity<?> findByCoordinates(
+			@RequestParam(value="coordinatesX", defaultValue="0") Integer coordinatesX,
+			@RequestParam(value="coordinatesY", defaultValue="0") Integer coordinatesY,
+			@RequestParam(value="maxDistance", defaultValue="0") Integer maxDistance) {
+		
+		System.out.println("coordinatesX: "+coordinatesX);
+		System.out.println("coordinatesY: "+coordinatesY);
+		System.out.println("maxDistance: "+maxDistance);
+		
+		List<Poi> pois = this.poiService.findByProximity(coordinatesX, coordinatesY, maxDistance);
+		
+		return  ResponseEntity.ok().body(pois);
+	}
+	
 }

@@ -17,7 +17,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import br.com.zup.entity.Poi;
 import br.com.zup.services.PoiService;
-
 /**
  * Testes de servico do {@link Poi}
  *  
@@ -70,6 +69,18 @@ public class PoiServiceTest {
 		Assert.assertEquals(pois, getMockPois());
 		
 		verify(poiService).findByName("Lanchonete");
+	}
+	
+	/**
+	 * Test for proximity
+	 */
+	@Test
+	public void test4proximity() {
+		Mockito.when(poiService.findByProximity(20, 10, 10)).thenReturn(getMockPois());
+		List<Poi> pois = poiService.findByProximity(20, 10, 10);
+		Assert.assertEquals(pois, getMockPois());
+		
+		verify(poiService).findByProximity(20, 10, 10);
 	}
 	
 	/**
