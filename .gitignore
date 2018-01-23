@@ -1,0 +1,29 @@
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+.springBeans
+.classpath
+.idea
+
+#Gradle temporary files
+target/
+.mvn/
+
+#Eclipse files
+**/.project
+**/.classpath
+**/.settings/
+blog/bin/
+**/.tern-project
+**/.mvn/
+
+#IntelliJ files
+**/*.iml
+**/.idea
+**/.gradle
