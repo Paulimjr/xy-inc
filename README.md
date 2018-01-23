@@ -11,7 +11,7 @@
   - 2.2 Abra a variável PATH ao final dela digite: ";%MVN_HOME%\bin" e salve. 
     Abra o terminal vá até o projeto e digite: mvn clean install.
 
-- 3 Crie uma pasta ex: "zup-backend", abra o terminal e efetue o clone do projeto com o comando abaixo:
+- 3 Crie uma pasta ex: "xy-inc", abra o terminal e efetue o clone do projeto com o comando abaixo:
     git clone https://github.com/Paulimjr/xy-inc.git
    
 - 4 Dentro da pasta do projeto execute o comando pelo terminal: mvn clean install (com testes) - mvn clean install -DskipTests  (sem os testes)
